@@ -2,6 +2,9 @@
 title: "About this blog"
 permalink: /about/
 layout: single
+toc : true
+comments: true
+toc_sticky: true
 ---
 
 ## Hello, I am Youngjin Baek! 🖐
