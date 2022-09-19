@@ -1,6 +1,5 @@
 ---
 title: "[LDSO/Code Review] Introduction"
-excerpt: "This post is an introduction of LDSO code review, mentioning references"
 
 categories:
     - LDSO

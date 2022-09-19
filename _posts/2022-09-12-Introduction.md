@@ -1,6 +1,5 @@
 ---
 title: "First post of blog"
-excerpt: "This post is an introduction of this blog, technical details of my and our projects."
 
 categories:
     - Blog
