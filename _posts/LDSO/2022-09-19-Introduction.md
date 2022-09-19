@@ -2,7 +2,7 @@
 title: "[LDSO/Code Review] Introduction"
 
 categories:
-    - LDSO
+    - LDSO code review
 tags:
     - LDSO
     - DSO
