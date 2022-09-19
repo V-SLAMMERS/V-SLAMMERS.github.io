@@ -31,10 +31,10 @@ comments: true
 
 ## Reference
 
-[https://github.com/tum-vision/LDSO](https://github.com/tum-vision/LDSO)
+1. [LDSO repository](https://github.com/tum-vision/LDSO)
 
-[https://github.com/JakobEngel/dso](https://github.com/JakobEngel/dso)
+2. [DSO repository](https://github.com/JakobEngel/dso)
 
-[Tags](https://tongling916.github.io/tags/#DSO)
+3. [Parameter explanation of DSO](https://tongling916.github.io/tags/#DSO)
 
-[[SLAM] Direct Sparse Odometry (DSO) 논문 및 코드 리뷰 (1)](https://alida.tistory.com/45)
+4. [DSO Code Review](https://alida.tistory.com/45)
