@@ -1,11 +1,9 @@
 ---
 title: "First post of blog"
-
 categories:
     - Blog
 tags:
     - Blog
-# last_modified_at: 2022-09-12T20:44:00-05:00
 toc : true
 toc_sticky: true
 comments: true

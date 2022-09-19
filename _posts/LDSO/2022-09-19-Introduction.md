@@ -1,14 +1,11 @@
 ---
 title: "[LDSO/Code Review] Introduction"
-# excerpt_separator: "<!--more-->"
-
 categories:
     - LDSO_code_review
 tags:
     - LDSO
     - DSO
     - Code Review
-# last_modified_at: 2022-09-19T21:50:00-05:00
 toc : true
 toc_sticky: true
 comments: true
