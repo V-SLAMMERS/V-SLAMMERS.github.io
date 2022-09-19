@@ -13,11 +13,11 @@ side:
   - title: ARNAVI
     children:
       - title: "Path Planning"
-        url: /categories/PathPlanning
+        url: /categories/PathPlanning/
       - title: "LDSO code review"
-        url: /categories/LDSO
+        url: /categories/LDSO/
   - title: Siwi Alimi
-    url: /categories/SiwiAlimi
+    url: /categories/SiwiAlimi/
 
   # - title: "Sample Posts"
   #   url: /year-archive/
