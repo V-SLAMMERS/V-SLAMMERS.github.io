@@ -1,5 +1,6 @@
 ---
 title: "[LDSO/Code Review] Introduction"
+# excerpt_separator: "<!--more-->"
 
 categories:
     - LDSO_code_review
