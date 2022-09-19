@@ -1,6 +1,6 @@
 ---
 title: "LDSO code review"
-permalink: /categories/LDSO code review/
+permalink: /categories/LDSO_code_review/
 layout: category
 author_profile: true
 taxonomy: LDSO code review
