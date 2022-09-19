@@ -10,6 +10,7 @@ toc : true
 toc_sticky: true
 comments: true
 ---
+
 # About me
   Hello, I am Youngjin Baek from South Korea. I am interested in embedded programming, computer vision, image processing, and artificial intelligence. Now, I am working at SK hynix as a digital signal processing engineer. I am responsible for developing digital signal processing algorithm for NAND Reliability.
 
