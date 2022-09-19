@@ -14,15 +14,15 @@ toc_sticky: true
 comments: true
 ---
 
-# LDSO Code Review
+## LDSO Code Review
 
-## Goal
+### Goal
 
   In this chapter, we are going to review the LDSO code and understand it in depth. Our final goal is to modularize the LDSO code and to use some parts of it. Most of all, we need localization function for our project.
 
  
 
-## Role
+### Role
 
   Our team members divide the code into 4 sections at first, and are responsible for each part. We select 4 granularities that needs to be studied with much effort and background knowledge, PixelSelector2, Undistort, CoarseInitializer, and CoarseTracker. 4 members who are responsible for those parts are as follows.
 
@@ -31,7 +31,7 @@ comments: true
 - CoarseInitializer - [jeongmyunglee](https://github.com/jeongmyunglee)
 - CoarseTracker - [HeejoonLee](https://github.com/HeejoonLee)
 
-## Reference
+### Reference
 
 1. [LDSO repository](https://github.com/tum-vision/LDSO)
 
