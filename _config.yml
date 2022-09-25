@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "V-SLAMMERS"
-  avatar           : "assets/images/logo_black.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/logo_black.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "We are focusing on Indoor AR Navigation based on SLAM, making internal maps of complex buildings, such as mall, college, and etc."
   location         : "South Korea"
   email            :
