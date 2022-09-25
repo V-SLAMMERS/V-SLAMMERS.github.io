@@ -51,7 +51,7 @@ Reference: [How to install OpenCV on Ubuntu 18.04](https://linuxize.com/post/how
  libtbb2 libtbb-dev libdc1394-22-dev
 ```
 
-#### 2.3.2. OpenCV, OpenCV_contrib repository 다운로드
+#### 2.3.2. Download OpenCV, OpenCV_contrib repository
 ```bash
 ~$ git clone https://github.com/opencv/opencv.git
 ~$ git clone https://github.com/opencv/opencv_contrib.git
