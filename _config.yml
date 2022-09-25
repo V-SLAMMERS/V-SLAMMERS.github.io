@@ -86,7 +86,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/logo_black.jpeg" # Open Graph/Twitter default site image
+og_image                 : "/assets/images/logo-black.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -105,8 +105,8 @@ analytics:
 # Site Author
 author:
   name             : "V-SLAMMERS"
-  avatar           : "/assets/images/logo_black.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "We are focusing on Indoor AR Navigation based on SLAM, making internal maps of complex buildings, such as mall, college, and etc."
+  avatar           : "/assets/images/logo-black.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Technical Archive of V-SLAMMERS Achievements"
   location         : "South Korea"
   email            :
   links:
