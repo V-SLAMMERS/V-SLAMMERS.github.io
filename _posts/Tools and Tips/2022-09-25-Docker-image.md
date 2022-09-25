@@ -80,18 +80,18 @@ $ docker run -v [HOST_DATASET_PATH]:/home/slam/datasets \
 -e DISPLAY=$DISPLAY \
 -it heejoon1130/slam:0.2
 ```
-💡 'xhost +' means that X server allows the connection from all clients. If you worry about the security, you can block the connection again via typing 'xhost -' after shutting down the Docker container.
+💡 `xhost +` means that X server allows the connection from all clients. If you worry about the security, you can block the connection again via typing `xhost -` after shutting down the Docker container.
 {: .notice}
 
-💡 'HOST_DATASET_PATH' is the path of the Host system that is mounted in '/home/slam/datasets' inside the Docker container
+💡 `HOST_DATASET_PATH` is the path of the Host system that is mounted in `/home/slam/datasets` inside the Docker container
 {: .notice}
 
 <div class="notice" markdown="1">
 For example, if we assume that Kitti dataset is stored in the host as followed.
 
-'~/shared/datasets/kitti/odometry_gray/sequences'
+`~/shared/datasets/kitti/odometry_gray/sequences`
 
-Then, 'HOST_DATASET_PATH' should be set in this way, '~/shared/datasets'
+Then, `HOST_DATASET_PATH` should be set in this way, `~/shared/datasets`
 </div>
 
 ### 3-3. Run SLAM
@@ -117,7 +117,7 @@ Select a sequence(Default:00):
 ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21']
 Sequence: 00
 ```
-To terminate, input 'ctrl + c' → 'q' → 'Enter'
+To terminate, input `ctrl + c` → `q` → `Enter`
 
 ## 4. Advanced Usage
 ### 4-1. Run Docker Container with bash
