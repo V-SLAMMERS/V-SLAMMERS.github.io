@@ -12,81 +12,58 @@ toc_sticky: true
 comments: true
 ---
 # Docker Images
-<aside>
 This post is originated from [HeejoonLee](https://github.com/HeejoonLee), rewritten by [YoungJ-Baek](https://github.com/YoungJ-Baek)
-</aside>
+{: .notice--info}
 
 ## Supported Frameworks(Datasets)
-
----
-
 - ORB-SLAM2(Kitti)
 - LDSO(Kitti, EuRoC)
 
 ## Prerequisites
-
----
-
-### Docker Engine
-
-[https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
+### 1. Docker Engine
+[How to install](https://docs.docker.com/engine/install/)
 
 ### Dataset
-
 - [Kitti](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)
 - [EuRoC](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets#downloads)
 
-### x86_64 System
-
-Supported OS:
+### 2. Supported OS
+**x86_64 System**:
 - Windows 10(WSL2)
 - Ubuntu
+> 💡 This system is not compatible with ARM64 system (observed with Apple M1 Pro)
 
-<aside>
-💡 ARM64 시스템과 호환되지 않음(Apple M1 Pro 확인)
-</aside>
-
-## Basic Usage
-
----
-
-### Docker Image Download
+### 3. Docker Image Download
 
 ```bash
 $ docker pull heejoon1130/slam:0.2
 ```
+> 💡 Image Size: 3.84GB
 
-<aside>
-💡 Image 크기: 3.84GB
-
-</aside>
-
-### Dataset Directory Setup
-
-반드시 아래와 같은 구조로 host system에서 dataset directory를 설정:
+### 4. Dataset Directory Setup
+The data directory should be set in the host system same as the structure as followed
 
 ```bash
 datasets
-	└── kitti
-			└── odometry_gray
-			    └── sequences
-			        ├── 00
-			        ├── 01
-			        ├── 02
-			        ├── 03
-							...
-	└── euroc
-			├── MH_01_easy
-			├── MH_02_easy
-			├── MH_03_medium
-			├── MH_04_difficult
-			├── MH_05_difficult
-      ...
+└── kitti
+    └── odometry_gray
+        └── sequences
+            ├── 00
+            ├── 01
+            ├── 02
+            ├── 03
+            ...
+└── euroc
+    ├── MH_01_easy
+    ├── MH_02_easy
+    ├── MH_03_medium
+    ├── MH_04_difficult
+    ├── MH_05_difficult
+    ...
 ```
 
 ## Run Docker Container
-
-### Windows(WSL2)
+### 1. Windows(WSL2)
 
 ```bash
 $ docker run -v [HOST_DATASET_PATH]:/home/slam/datasets \
@@ -94,7 +71,7 @@ $ docker run -v [HOST_DATASET_PATH]:/home/slam/datasets \
 -it heejoon1130/slam:0.2
 ```
 
-### Ubuntu
+### 2. Ubuntu
 
 ```bash
 $ xhost +
@@ -104,20 +81,13 @@ $ docker run -v [HOST_DATASET_PATH]:/home/slam/datasets \
 -it heejoon1130/slam:0.2
 ```
 
-<aside>
-💡 `xhost +` 는 X server가 모든 client로부터의 연결을 허용하겠다는 의미로 보안이 걱정된다면 Docker container 종료 후 `xhost -` 로 다시 연결을 차단할 수 있음
+> 💡 `xhost +` 는 X server가 모든 client로부터의 연결을 허용하겠다는 의미로 보안이 걱정된다면 Docker container 종료 후 `xhost -` 로 다시 연결을 차단할 수 있음
 
-</aside>
-
-<aside>
-💡 HOST_DATASET_PATH: Host system의 경로로 Docker container 내부에서 /home/slam/datasets에 mount되는 경로
-
-</aside>
+> 💡 HOST_DATASET_PATH: Host system의 경로로 Docker container 내부에서 /home/slam/datasets에 mount되는 경로
 
 > 예시) Kitti dataset이 다음과 같이 host에 저장되어있다고 하면: ~/shared/datasets/kitti/odometry_gray/sequences, HOST_DATASET_PATH 는 다음과 같이 설정해야 한다: **~/shared/datasets**
-> 
 
-### Run SLAM
+### 3. Run SLAM
 
 최초 실행 시, framework 선택 및 dataset 선택 옵션이 출력 되고, 적절한 옵션을 선택하여 실행.
 
