@@ -1,6 +1,6 @@
 ---
 title: "Indoor AR Navigation project based on SLAM technology"
-permalink: /categories/Indoor_AR_Navigation
+permalink: /categories/Indoor_AR_Navigation/
 layout: category
 author_profile: true
 taxonomy: Indoor-AR-Navigation
