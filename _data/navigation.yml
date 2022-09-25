@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Home"
-    url: https://YoungJ-Baek.github.io/
+    url: https://V-SLAMMERS.github.io/
   - title: "About"
     url: /about/
   - title: "Categories"
@@ -10,14 +10,17 @@ main:
     url: /tags/
 
 side:
-  - title: ARNAVI
+  - title: Indoor AR Navigation
+    url: /categories/Indoor_AR_Navigation/
     children:
       - title: "Path Planning"
         url: /categories/Path_Planning/
       - title: "LDSO code review"
         url: /categories/LDSO_code_review/
-  - title: Siwi Alimi
-    url: /categories/SiwiAlimi/
+      - title: "Tools and Tips"
+        url: /categories/Tools_and_Tips/
+  # - title: Siwi Alimi
+  #   url: /categories/SiwiAlimi/
 
   # - title: "Sample Posts"
   #   url: /year-archive/
