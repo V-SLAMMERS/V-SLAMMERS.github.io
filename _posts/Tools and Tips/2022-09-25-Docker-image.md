@@ -31,6 +31,7 @@ This post is originated from [HeejoonLee](https://github.com/HeejoonLee), rewrit
 **x86_64 System**:
 - Windows 10(WSL2)
 - Ubuntu
+
 💡 This system is not compatible with ARM64 system (observed with Apple M1 Pro)
 {: .notice--warning}
 
@@ -43,7 +44,7 @@ $ docker pull heejoon1130/slam:0.2
 {: .notice}
 
 ### 2-5. Dataset Directory Setup
-The data directory should be set in the host system same as the structure as followed
+The `datasets` directory should be set up in the host system as in the following structure:
 
 ```bash
 datasets
@@ -72,6 +73,9 @@ $ docker run -v [HOST_DATASET_PATH]:/home/slam/datasets \
 -it heejoon1130/slam:0.2
 ```
 
+> SLAM frameworks in the Docker image use the *Pangolin* viewer to display the localization and mapping process using *GUI*. An X server must be set up on Windows(`Xming`, ...) and the `DISPLAY` variable correctly set to the host display in order to run GUI applications in WSL2.
+{: .notice}
+
 ### 3-2. Ubuntu
 ```bash
 $ xhost +
@@ -80,14 +84,15 @@ $ docker run -v [HOST_DATASET_PATH]:/home/slam/datasets \
 -e DISPLAY=$DISPLAY \
 -it heejoon1130/slam:0.2
 ```
+
 💡 `xhost +` means that X server allows the connection from all clients. If you worry about the security, you can block the connection again via typing `xhost -` after shutting down the Docker container.
 {: .notice}
 
-💡 `HOST_DATASET_PATH` is the path of the Host system that is mounted in `/home/slam/datasets` inside the Docker container
+💡 `HOST_DATASET_PATH` is the path to the *datasets* directory in the host system that is mounted in `/home/slam/datasets` inside the Docker container
 {: .notice}
 
 <div class="notice" markdown="1">
-For example, if we assume that Kitti dataset is stored in the host as followed.
+For example, if we assume that the Kitti dataset is stored in the host as follows:
 
 `~/shared/datasets/kitti/odometry_gray/sequences`
 
@@ -117,6 +122,7 @@ Select a sequence(Default:00):
 ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21']
 Sequence: 00
 ```
+
 To terminate, input `ctrl + c` → `q` → `Enter`
 
 ## 4. Advanced Usage
@@ -132,4 +138,5 @@ The output will be like as followed.
 ```bash
 root@23kflkjasd8f:/home/slam#
 ```
-Then, you can modify the source code directly via terminal and can run your own code
+
+Then, you may modify the source code directly via terminal and test the changes you have made.
