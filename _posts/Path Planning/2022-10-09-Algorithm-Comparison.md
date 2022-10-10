@@ -10,16 +10,6 @@ comments: true
 ---
 This post is written by [YoungJ-Baek](https://github.com/YoungJ-Baek)
 {: .notice--info}
-
-# Brainstorm
-
-- Concern
-    - 목적은 Global path-planning과 부합하나, map 생성 이후 user 사용 환경에서 변화된 환경(공사, 부스 설치 등)에 의해 갈 수 없는 길이 존재 가능
-    - 위와 같은 경우 Local path-planning으로 회피해 그 위치에서 localize 후 Global path-planning으로 다시 진입해야 할 것으로 판단됨
-- Issue
-    - Obstacle이 Boundary line이 아니라 모두 Black으로 되어 있으면, 연산량이 많아진다. 현재 코드는 Obstacle pixel들을 등록해 Path-planning을 진행하고 있다.
-    - Sampling based algorithm들(RRT based)은 현재 open source들을 살펴봤을 때, randomness + sampling 특성이 합쳐져 모든 node 생성 과정에 collision check를 모든 obstacle list에 대해 진행한다. 따라서, 현재 map에 이 open source들을 적용한다면 매 node 생성 시 모든 black pixel들을 확인해 연산량이 방대해진다.
-
 ## 1. Overview
 In this post, we compare several path planning algorithms including both grid search based and sampling based algorithms. All of them are based on generated grid map using KITTI dataset and our PCL2GRID module. In conclusion, we could find the shortest path via optimization. In this post, we will check the feasibility via some experiments.
 
@@ -61,13 +51,13 @@ We cannot obtain the right path due to the long runtime
 {: .notice--warning}
 
 #### 2.2.4. Conclusion
+Most of all, we were not able to obtain the right path via sampling based algorithms. To find the root cause of the problem, we did some analysis. Therefore, we found some critical issue of the algorithms. Since the algorithms use randomness and sampling characteristics, it requires collision check process for the every obstacle list for the every node generating steps. So, it requires huge amount of computation if we keep using 2D grid map. Moreover, our map fills black pixels for the all obstacles instead of using boundary line. However, the current code of sampling algorithm registers all the obstacle pixels to plan the right path. In other words, if we apply sampling based algorithms to our current map, we should check all the black pixels for the every node generation process which causes computational bottleneck of the performance.
 
-    - Conclusion
-        1. 위에 Issue에서 언급했듯이, node 생성 시 모든 obstacle(black pixel)에 대해 장애물 여부를 확인하기 때문에, 연산량 줄일 수 있는 map이 필요
-        2. 현재 open source에서 제공하는 예제는 장애물들을 단순화(rectangular, circle, etc.)해 적은 연산으로 collision check가 가능함
-        
+In conclusion, if we want to use sampling based algorithm, we should generate a whole new map to reduce the computational bottleneck. The examples that open source codes use are minimized or optimized as simple obstacles to check the collision with minimum computation such as rectangular, circle, and so on.     
 
-# Next Step
+## 3. Next Step
+1. We should simplify the map to move multiple pixels at once or require the map with higher quality that can provides more detailed information
+2. We need to think about graph-based map generation if we want to use sampling based algorithm (requires postprocessing after generating PCL map)
 
-1. N pixel 단위로 이동이 가능하게 obstacle 단순화 or map 정보를 더 많이 필요(장애물 최소 거리)
-2. 그래프 형식으로 path-planning이 가능하도록 map postprocessing
+## 4. Concern
+During the experiment, we found that our goal of path planning is same with global path planning, but we should consider the changes of environment(construction, booth, etc) that users cannot enter. In other words, we should sense the difference of generated map and the user environment. In this case, it is more likely to be local path planning. So, we need to think about turn on the local path planning to find the alternative path, then return to global path planning after localization
