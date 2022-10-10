@@ -27,15 +27,15 @@ In this post, we compare several path planning algorithms including both grid se
 
 ### 2.1. Grid Search based
 1. D* Lite
-<p align="center"><img src="/assets/images/posts/d_star_lite.png" height="100px" width="100px"></p>
+<p align="center"><img src="/assets/images/posts/d_star_lite.png" height="300px" width="300px"></p>
 <!-- ![d_star_lite.png](/assets/images/posts/d_star_lite.png) -->
     
 - D*
-<p align="center"><img src="/assets/images/posts/d_star.png" height="100px" width="100px"></p>
+<p align="center"><img src="/assets/images/posts/d_star.png" height="300px" width="300px"></p>
 <!-- ![d_star.png](/assets/images/posts/d_star.png) -->
     
 - Bidirectional A*
-<p align="center"><img src="/assets/images/posts/bidirectional_a_star.png" height="100px" width="100px"></p>
+<p align="center"><img src="/assets/images/posts/bidirectional_a_star.png" height="300px" width="300px"></p>
 <!-- ![bidirectional_a_star.png](/assets/images/posts/bidirectional_a_star.png) -->
     
 - Result
