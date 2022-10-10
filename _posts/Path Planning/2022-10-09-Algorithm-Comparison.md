@@ -12,6 +12,7 @@ comments: true
 ---
 This post is written by [YoungJ-Baek](https://github.com/YoungJ-Baek)
 {: .notice--info}
+
 ## 1. Overview
 In this post, we compare several path planning algorithms including both grid search based and sampling based algorithms. All of them are based on generated grid map using KITTI dataset and our PCL2GRID module. In conclusion, we could find the shortest path via optimization. In this post, we will check the feasibility via some experiments.
 
