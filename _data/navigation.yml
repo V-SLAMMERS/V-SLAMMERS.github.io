@@ -13,6 +13,8 @@ side:
   - title: Indoor AR Navigation
     url: /categories/Indoor_AR_Navigation/
     children:
+      - title: "Point Cloud Library"
+        url: /categories/Point_Cloud_Library/
       - title: "Path Planning"
         url: /categories/Path_Planning/
       - title: "LDSO code review"

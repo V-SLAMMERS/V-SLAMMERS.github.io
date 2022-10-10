@@ -1,7 +1,7 @@
 ---
 title: "[PCL] Map Generation"
 categories:
-    - Point Cloud Library
+    - Point_Cloud_Library
 tags:
     - PCL
     - Map
