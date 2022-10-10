@@ -25,34 +25,43 @@ In this post, we compare several path planning algorithms including both grid se
 
 ## 2. Algorithm Comparison
 
-### 2.1. Grid Search based
-1. D* Lite
-<p align="center"><img src="/assets/images/posts/d_star_lite.png" height="300px" width="300px"></p>
+### 2.1. Grid Search based algorithms
+#### 2.1.1. D* Lite
+<p align="center"><img src="/assets/images/posts/d_star_lite.png" height="500px" width="500px"></p>
 <!-- ![d_star_lite.png](/assets/images/posts/d_star_lite.png) -->
-    
-- D*
-<p align="center"><img src="/assets/images/posts/d_star.png" height="300px" width="300px"></p>
+
+#### 2.1.2. D*
+<p align="center"><img src="/assets/images/posts/d_star.png" height="500px" width="500px"></p>
 <!-- ![d_star.png](/assets/images/posts/d_star.png) -->
     
-- Bidirectional A*
-<p align="center"><img src="/assets/images/posts/bidirectional_a_star.png" height="300px" width="300px"></p>
+#### 2.1.3. Bidirectional A*
+<p align="center"><img src="/assets/images/posts/bidirectional_a_star.png" height="500px" width="500px"></p>
 <!-- ![bidirectional_a_star.png](/assets/images/posts/bidirectional_a_star.png) -->
     
-- Result
-    - w/o Visualization : 356.703 sec
-    - w/   Visualization : 372.622 sec
-- Conclusion
-    1. Grid Search 기반 알고리즘들은 경로를 탐색하는데 어려움은 없음
-    2. 성능이 증가한 알고리즘일수록 최단 거리가 아닌 확률 증가
-    3. 절대적인 map size가 연산량에 큰 영향을 미침
+#### 2.1.4. Visualization
+We did an experiment to measure the impact of visualization. We thought it could be bottleneck, because the image size is too big. As a result, it was a big burden, but not the root cause for the performance drop. You can see the performance comparison by time difference as followed.
 
-- Sampling based
-    - RRT
-        - Runtime이 너무 길어 path 추정 불가
-    - RRT*
-        - Runtime이 너무 길어 path 추정 불가
-    - Informed RRT*
-        - Runtime이 너무 길어 path 추정 불가
+1. w/o Visualization : 356.703 sec
+2. w/  Visualization : 372.622 sec
+
+#### 2.1.5. Conclusion
+Most of all, we could find the right path easily via grid search based algorithms. However, as the algorithm shows higher performance, it has more probability to return inaccurate result, which means it is not the shortest path. Also, the absolute map size has a big influence on the amount of computation. Since our map convert floor map or building map into grid map, it might require huge image size. So, if we decide to use grid search based algorithms, we need to optimize to reduce the amount of computation.
+
+### 2.2. Sampling based algorithms
+#### 2.2.1. RRT
+We cannot obtain the right path due to the long runtime
+{: .notice--warning}
+
+#### 2.2.2. RRT*
+We cannot obtain the right path due to the long runtime
+{: .notice--warning}
+
+#### 2.2.3. Informed RRT*
+We cannot obtain the right path due to the long runtime
+{: .notice--warning}
+
+#### 2.2.4. Conclusion
+
     - Conclusion
         1. 위에 Issue에서 언급했듯이, node 생성 시 모든 obstacle(black pixel)에 대해 장애물 여부를 확인하기 때문에, 연산량 줄일 수 있는 map이 필요
         2. 현재 open source에서 제공하는 예제는 장애물들을 단순화(rectangular, circle, etc.)해 적은 연산으로 collision check가 가능함
