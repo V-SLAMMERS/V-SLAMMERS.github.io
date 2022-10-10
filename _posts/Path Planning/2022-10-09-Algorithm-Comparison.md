@@ -4,6 +4,8 @@ categories:
     - Path_Planning
 tags:
     - Path Planning
+    - A*
+    - D*
 toc : true
 toc_sticky: true
 comments: true
