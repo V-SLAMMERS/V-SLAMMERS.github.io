@@ -1,48 +1,31 @@
 ---
-title: "[LDSO/Localization] "
+title: "[LDSO/Localization] How to match frames with PCD map"
 categories:
-    - LDSO_code_review
+    - Localization
 tags:
     - LDSO
-    - DSO
-    - Code Review
+    - Localization
+    - Loop Closing
 toc : true
 toc_sticky: true
 comments: true
 ---
+This post is written by [YoungJ-Baek](https://github.com/YoungJ-Baek)
+{: .notice--info}
 
-This post is about LDSO code review introduction
+## 1. Goal
+For our project's localization, we divide into two parts. First part is how to store the information for matching frames with PCD map. For this part, [YoungJ-Baek](https://github.com/YoungJ-Baek) and [jeonjw25](https://github.com/jeonjw25) will be responsible for the implementation.
 
-## LDSO Code Review
+## 2. Brainstorming
+We have an open discussion for a week, then are able to make two approaches. First one is expanding current LDSO implementation that uses key frames to all frames. Second one is to add additional information for the searching.
 
-### Goal
+## 3. Approach
+### 3.1. Expanding key frames to all frames
+Simply, we compare current algorithm and modified version.
 
-  In this chapter, we are going to review the LDSO code and understand it in depth. Our final goal is to modularize the LDSO code and to use some parts of it. Most of all, we need localization function for our project.
+- As-Is: Key Frames → PCD
+- To-Be: All Frames → PCD
 
- 
+In this way, we can earn additional advantage that improves the quality of map. Since the new method uses all frames for map generation, it would be much accurate than the previous way. If we select this method, we can generate BoW and store all frames without any additional implementation. However, we should modify some codes to expand key frames to all frames. In this point, there would be high probability of SW bugs because of previous codes' dependency.
 
-### Role
-
-  Our team members divide the code into 4 sections at first, and are responsible for each part. We select 4 granularities that needs to be studied with much effort and background knowledge, PixelSelector2, Undistort, CoarseInitializer, and CoarseTracker. 4 members who are responsible for those parts are as follows.
-
-- PixelSelector2 - [YoungJ-Baek](https://github.com/YoungJ-Baek)
-- Undistort - [jeonjw25](https://github.com/jeonjw25)
-- CoarseInitializer - [jeongmyunglee](https://github.com/jeongmyunglee)
-- CoarseTracker - [HeejoonLee](https://github.com/HeejoonLee)
-
-
-
-### In this chapter
-  In this chapter, I will post all the code review and description of PixelSelector2. Of course, you can find the same content at our official blog. Moreover, I will post other sections' summary and related links, too. However, details about other sections are at our official blog.
-
-
-  
-### Reference
-
-1. [LDSO repository](https://github.com/tum-vision/LDSO)
-
-2. [DSO repository](https://github.com/JakobEngel/dso)
-
-3. [Parameter explanation of DSO](https://tongling916.github.io/tags/#DSO)
-
-4. [DSO Code Review](https://alida.tistory.com/45)
+### 3.2. Adding additional information
