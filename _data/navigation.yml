@@ -17,6 +17,8 @@ side:
         url: /categories/Point_Cloud_Library/
       - title: "Path Planning"
         url: /categories/Path_Planning/
+      - title: "Localization"
+        url: /categories/Localization/
       - title: "LDSO code review"
         url: /categories/LDSO_code_review/
       - title: "Tools and Tips"
