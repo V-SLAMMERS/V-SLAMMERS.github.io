@@ -20,14 +20,14 @@ This post is originated from [HeejoonLee](https://github.com/HeejoonLee), rewrit
 - LDSO(Kitti, EuRoC)
 
 ## 2. Prerequisites
-### 2-1. Docker Engine
+### 2.1. Docker Engine
 [How to install](https://docs.docker.com/engine/install/)
 
-### 2-2. Dataset
+### 2.2. Dataset
 - [Kitti](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)
 - [EuRoC](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets#downloads)
 
-### 2-3. Supported OS
+### 2.3. Supported OS
 **x86_64 System**:
 - Windows 10(WSL2)
 - Ubuntu
@@ -35,7 +35,7 @@ This post is originated from [HeejoonLee](https://github.com/HeejoonLee), rewrit
 💡 This system is not compatible with ARM64 system (observed with Apple M1 Pro)
 {: .notice--warning}
 
-### 2-4. Docker Image Download
+### 2.4. Docker Image Download
 
 ```bash
 $ docker pull heejoon1130/slam:0.2
@@ -43,7 +43,7 @@ $ docker pull heejoon1130/slam:0.2
 💡 Image Size: 3.84GB
 {: .notice}
 
-### 2-5. Dataset Directory Setup
+### 2.5. Dataset Directory Setup
 The `datasets` directory should be set up in the host system as in the following structure:
 
 ```bash
@@ -66,7 +66,7 @@ datasets
 ```
 
 ## 3. Basic Usage (Run Docker Container)
-### 3-1. Windows(WSL2)
+### 3.1. Windows(WSL2)
 ```bash
 $ docker run -v [HOST_DATASET_PATH]:/home/slam/datasets \
 -e DISPLAY=$DISPLAY \
@@ -76,7 +76,7 @@ $ docker run -v [HOST_DATASET_PATH]:/home/slam/datasets \
 > SLAM frameworks in the Docker image use the *Pangolin* viewer to display the localization and mapping process using *GUI*. An X server must be set up on Windows(`Xming`, ...) and the `DISPLAY` variable correctly set to the host display in order to run GUI applications in WSL2.
 {: .notice}
 
-### 3-2. Ubuntu
+### 3.2. Ubuntu
 ```bash
 $ xhost +
 $ docker run -v [HOST_DATASET_PATH]:/home/slam/datasets \
@@ -99,7 +99,7 @@ For example, if we assume that the Kitti dataset is stored in the host as follow
 Then, `HOST_DATASET_PATH` should be set in this way, `~/shared/datasets`
 </div>
 
-### 3-3. Run SLAM
+### 3.3. Run SLAM
 At the first run, options for selecting framework and dataset will be printed. Then, you can choose appropriate options and run the SLAM.
 
 Run example:
@@ -126,7 +126,7 @@ Sequence: 00
 To terminate, input `ctrl + c` → `q` → `Enter`
 
 ## 4. Advanced Usage
-### 4-1. Run Docker Container with bash
+### 4.1. Run Docker Container with bash
 
 ```bash
 $ docker run -v [HOST_DATASET_PATH]:/home/slam/datasets \
