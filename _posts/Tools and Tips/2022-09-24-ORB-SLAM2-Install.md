@@ -1,7 +1,7 @@
 ---
 title: "[ORB SLAM2] ORB SLAM2 Installation Guide"
 categories:
-    - Tools and Tips
+    - Tools_and_Tips
 tags:
     - ORB SLAM2
 toc : true
