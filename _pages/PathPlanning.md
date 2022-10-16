@@ -1,9 +1,9 @@
 ---
 title: "Path planning algorithms and footprints"
-permalink: /categories/PathPlanning/
+permalink: /categories/Path_Planning/
 layout: category
 author_profile: true
-taxonomy: PathPlanning
+taxonomy: Path Planning
 ---
 
 This category is about path planning algorithms and implementation of them.
