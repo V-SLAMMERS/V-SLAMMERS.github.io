@@ -23,6 +23,11 @@ side:
         url: /categories/LDSO_code_review/
       - title: "Tools and Tips"
         url: /categories/Tools_and_Tips/
+  - title: Study Minutes
+    url: /categories/Study_Minutes/
+    children:
+      - title: "Indoor AR Navigation"
+        url: /categories/Minutes_ARNAVI/
   # - title: Siwi Alimi
   #   url: /categories/SiwiAlimi/
 
