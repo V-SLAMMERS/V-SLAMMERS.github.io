@@ -82,15 +82,29 @@ Although the filtering process removes unnecessary information from the point cl
 
 ### Plane Segmentation
 
-Parameters: *distanceThreshold*
+| Parameter | Description |
+| --- | --- |
+| `distanceThreshold` | (TODO) |
 
-TODO: IMAGE
+
+| *distanceThreshold* = 0.1 |
+| :---: |
+| ![plane_segmentation](/assets/images/posts/dso_full_seg_plane.PNG.png) |
+
+
+Each point is colored based on the plane that it is a part of.
+
 
 ### Region Growing Segmentation
 
-Parameters: *TODO*
+| Parameter | Description |
+| --- | --- |
+| (TODO) | (TODO) |
 
-TODO: IMAGE
+| region growing segmentation | walls only | top view |
+| :---: | :---: | :---: |
+| ![region_growing_segmentation](/assets/images/posts/seg.PNG.png) | ![walls_only](/assets/images/posts/normal.PNG.png) | ![top_view](/assets/images/posts/top_view.PNG.png) |
+
 
 ## Reconstruction
 
@@ -102,10 +116,17 @@ One flaw that stands out in the current form is the sheer amount of missing info
 
 We can compensate for the absence of information using various reconstruction methods. The point cloud library provides the *moving least squares surface reconsturction* API, which we apply to our point cloud:
 
-TODO: IMAGE
+
+| Before applying MLS | After applying MLS(*radius*=0.30) |
+| :---: | :---: |
+| ![MLS_before](/assets/images/posts/mls_raw.PNG.png) | ![MLS_after](/assets/images/posts/mls_0.30.PNG.png) |
+
 
 Projecting the trajectory of the camera on the point cloud can help us to identify where the doors are supposed to be:
 
-TODO: IMAGE
+| Trajectory |
+| :---: |
+| ![trajectory](/assets/images/posts/projection_mls_path.PNG.png) |
+
 
 [pcl_tutorial]: https://pcl.readthedocs.io/projects/tutorials/en/master/
