@@ -1,9 +1,9 @@
 ---
-title: "[Markdown/Template] Git page Post Template"
+title: "[10/20] Spot meeting minutes"
 categories:
-    - Tools_and_Tips
+    - Minutes_ARNAVI
 tags:
-    - Markdown
+    - minutes
 toc : true
 toc_sticky: true
 comments: true
