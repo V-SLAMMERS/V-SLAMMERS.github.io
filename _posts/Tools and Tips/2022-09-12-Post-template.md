@@ -25,7 +25,19 @@ Indexing is the first thing for good documentation. There are some rules for the
 Usually, there are many reference source for our project. So, it is very obvious that every post based on our project have many references. They can be open source code from Github, some articles from great blogs, and figures from papers. For the every reference, we should link the originated URL. We can link it with hyperlink, or make the reference chapter at the last chapter.
 
 ## 3. Template
-TBD
+<div class="notice--primary" markdown="1">
+The post starts with author. If you rewrite someone's post, starts with `~ originated from [Originator], rewritten by [Writer]`.
+```bash
+This post is written by [Writer](Profile URL)
+{: .notice--info}
+```
+</div>
+
+### 1. Preface
+In this chapter, you can write abstract, goal, purpose, objective, or preface. The name can be different, too. All you need to keep in mind is that reader can understand about the whole post briefly with this chapter.
+
+### 2. Body
+(TBD)
 
 ## 4. Markdown usage
-TBD
+(TBD)
