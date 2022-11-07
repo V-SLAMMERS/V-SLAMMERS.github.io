@@ -22,8 +22,11 @@ To test loop detection in LDSO, we have to do deep dive on bag-of-words. Further
 ## 2. Open Source Library
 
 [DBoW2](https://github.com/dorian3d/DBoW2 "@embed")
+
 [DBoW3](https://github.com/rmsalinas/DBow3 "@embed")
+
 [FBoW](https://github.com/rmsalinas/fbow "@embed")
+
 [pyDBoW3](https://github.com/foxis/pyDBoW3 "@embed")
 
 ## 3. Author
