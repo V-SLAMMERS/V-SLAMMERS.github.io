@@ -22,11 +22,14 @@ To test loop detection in LDSO, we have to do deep dive on bag-of-words. Further
 ## 2. Open Source Library
 
 [DBoW2](https://github.com/dorian3d/DBoW2 "@embed")
+[DBoW3](https://github.com/rmsalinas/DBow3 "@embed")
+[FBoW](https://github.com/rmsalinas/fbow "@embed")
+[pyDBoW3](https://github.com/foxis/pyDBoW3 "@embed")
 
-## 3. Action Item
+## 3. Author
 
-Today, we decide to develop test code for loop closing. At this time, we decide to make 4 different codes for trials and errors. So, all the four members will develop test code for loop closing.
+[Dorian Galvez-Lopez](http://doriangalvez.com/)
 
-## 4. Next Agenda
+## 4. Article
 
-Next time, we will check the status of test code development. Our first goal is to detect loop closing with the test code. So, we will compare each codes and combine them into our common code.
+[Loop Closure Detection with DBoW2](https://lee-jaewon.github.io/slam/Loop_Detection/)
