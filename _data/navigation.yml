@@ -23,6 +23,8 @@ side:
         url: /categories/LDSO_code_review/
       - title: "Tools and Tips"
         url: /categories/Tools_and_Tips/
+  - title: Study Materials
+    url: /categories/Study_Materials/
   - title: Study Minutes
     url: /categories/Study_Minutes/
     children:
